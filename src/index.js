@@ -8,14 +8,16 @@ const render = () => {
   const uploadedImage = new Image();
   uploadedImage.src = URL.createObjectURL(fileSelector.files[0]);
   uploadedImage.onload = () => {
-    c.width = 200;
-    c.height = 200;
+    c.width = 400;
+    c.height = 400;
+    ctx.scale(2, 2);
     ctx.translate(10, 10);
     ctx.scale(0.9, 0.9);
     ctx.translate(0, 6);
     ctx.beginPath();
     ctx.clip(new Path2D(fuckwitPath));
     ctx.resetTransform();
+    ctx.scale(2, 2);
     ctx.drawImage(uploadedImage, 0, 0, 200, 200);
     saveButton.href = c.toDataURL();
   };
