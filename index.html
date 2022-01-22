@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dipshitifier</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #save {
+        -webkit-appearance: button;
+        padding: 15px;
+        appearance: button;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="file" id="selector" accept="image/*" />
+    <a id="save" download href="#">Save</a>
+    <canvas id="fuckhead"></canvas>
+    <script src="/src/index.js" type="module"></script>
+  </body>
+</html>
